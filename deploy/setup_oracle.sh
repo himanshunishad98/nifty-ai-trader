@@ -32,8 +32,7 @@ if [ -d "$APP_DIR" ]; then
     cd "$APP_DIR" && git pull
 else
     echo "  Cloning repository..."
-    # Replace with your actual GitHub repo URL:
-    git clone https://github.com/YOUR_USERNAME/nifty-ai-trader.git "$APP_DIR"
+    git clone https://github.com/himanshunishad98/nifty-ai-trader.git "$APP_DIR"
     cd "$APP_DIR"
 fi
 

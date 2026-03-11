@@ -13,7 +13,7 @@ AI-powered NIFTY 50 options intelligence dashboard built with Streamlit.
 ## Quick Deploy (Oracle Cloud)
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/nifty-ai-trader.git
+git clone https://github.com/himanshunishad98/nifty-ai-trader.git
 cd nifty-ai-trader
 bash deploy/setup_oracle.sh
 ```
