@@ -1,0 +1,55 @@
+market_data:
+  ticker: "^NSEI"
+  vix_ticker: "^INDIAVIX"
+  periods:
+    "1m": "5d"
+    "5m": "1mo"
+  vix_periods:
+    "1d": "1mo"
+    "5m": "5d"
+
+news_sentiment:
+  feeds:
+    "Economic Times": "https://economictimes.indiatimes.com/markets/rssfeeds/1977021501.cms"
+    "Moneycontrol": "https://www.moneycontrol.com/rss/MCtopnews.xml"
+  headers:
+    "User-Agent": "Mozilla/5.0"
+
+option_chain:
+  base_url: "https://www.nseindia.com"
+  headers:
+    "User-Agent": "Mozilla/5.0"
+    "Accept": "application/json,text/plain,*/*"
+    "Referer": "https://www.nseindia.com/option-chain"
+    "Accept-Language": "en-US,en;q=0.9"
+
+analysis:
+  contract_size: 75
+  weights:
+    "indicators": 0.4
+    "option_chain": 0.3
+    "patterns": 0.2
+    "news_sentiment": 0.1
+
+ui:
+  refresh_interval_seconds: 60
+  theme:
+    bg: "#0B0F19"
+    panel: "#151A26"
+    panel_alt: "#1C2333"
+    grid: "#2A3441"
+    text: "#E2E8F0"
+    muted: "#94A3B8"
+    accent: "#38BDF8"
+    accent_alt: "#0EA5E9"
+    green: "#10B981"
+    red: "#F43F5E"
+    yellow: "#F59E0B"
+    font: "'Inter', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif"
+  tabs:
+    - "Dashboard"
+    - "Signals"
+    - "Options Flow"
+    - "AI Model"
+    - "Performance"
+    - "Assistant"

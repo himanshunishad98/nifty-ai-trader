@@ -1,0 +1,30 @@
+[Unit]
+Description=NIFTY AI Trader — Streamlit Dashboard
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=ubuntu
+WorkingDirectory=__HOME__/nifty-ai-trader
+Environment="PATH=__HOME__/nifty-ai-trader/.venv/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+Environment="PYTHONIOENCODING=utf-8"
+Environment="PYTHONDONTWRITEBYTECODE=1"
+ExecStart=__HOME__/nifty-ai-trader/.venv/bin/streamlit run dashboard/dashboard.py \
+    --server.port=8501 \
+    --server.address=0.0.0.0 \
+    --server.headless=true \
+    --server.enableCORS=false \
+    --server.enableXsrfProtection=false \
+    --browser.gatherUsageStats=false
+Restart=always
+RestartSec=10
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=nifty-trader
+
+# Resource limits (uses shared 24GB RAM on Oracle A1)
+LimitNOFILE=65536
+
+[Install]
+WantedBy=multi-user.target

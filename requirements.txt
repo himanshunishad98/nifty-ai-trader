@@ -1,0 +1,43 @@
+# NIFTY AI Trader — Cloud Requirements
+# Generated for Oracle Cloud ARM Ubuntu 22.04
+
+# Web framework
+streamlit==1.55.0
+streamlit-autorefresh==1.0.1
+streamlit-option-menu==0.4.0
+
+# Data & analysis
+pandas==2.3.3
+numpy==2.4.3
+yfinance==1.2.0
+pandas-datareader==0.10.0
+nsepy==0.8
+jugaad-data==0.29
+nselib==2.4.3
+ta==0.11.0
+plotly==6.6.0
+scipy==1.17.1
+pyarrow==23.0.1
+
+# ML / AI
+scikit-learn==1.8.0
+# PyTorch CPU — ARM Linux build
+--extra-index-url https://download.pytorch.org/whl/cpu
+torch==2.6.0
+torchvision==0.21.0
+
+# News & Sentiment
+feedparser==6.0.12
+gnews==0.4.3
+vaderSentiment==3.3.2
+beautifulsoup4==4.9.3
+requests==2.32.5
+lxml==6.0.2
+
+# Utilities
+python-dateutil==2.9.0.post0
+pytz==2026.1.post1
+joblib==1.5.3
+six==1.17.0
+toml==0.10.2
+pyyaml==6.0.3
